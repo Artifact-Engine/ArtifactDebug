@@ -3,22 +3,21 @@ package org.openartifact.debug.components
 import org.openartifact.artifact.core.graphics.mesh.OBJLoader
 import org.openartifact.artifact.core.graphics.component.MeshRendererComponent
 import org.openartifact.artifact.utils.FileConstants
-import org.openartifact.debug.nodes.CowNode
+import org.openartifact.debug.nodes.TestMeshNode
 import java.io.File
 
-class CowRenderer : MeshRendererComponent() {
+class TestMeshRenderer : MeshRendererComponent() {
 
-    lateinit var node : CowNode
+    lateinit var node : TestMeshNode
 
     init {
-        mesh = OBJLoader.loadMesh(File(FileConstants.gameData(), "cow.obj"))
+        mesh = OBJLoader.loadMesh(File(FileConstants.gameData(), "cube.obj"))
     }
 
     override fun awake() {
         super.awake()
 
-        node = parent as CowNode
-
+        node = parent as TestMeshNode
     }
 
     override fun update(physicsDeltaTime : Double) {
