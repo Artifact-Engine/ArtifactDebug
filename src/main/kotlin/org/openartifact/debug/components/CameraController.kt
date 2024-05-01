@@ -29,6 +29,7 @@ class CameraController : Component() {
         // Apply movement increments to the camera
         camera.move(camInc.x, camInc.y, camInc.z, speed)
 
+        // Process camera rotation
         mouseInput(0.5f, getMouseButtonDown(MOUSE_BUTTON_2)) { x, y ->
             camera.rotate(x, y, 0f)
         }
