@@ -86,6 +86,7 @@ class CubeRenderer : MeshRenderer(
             0.5f, 0.5f,
             1.0f, 0.5f,
         ),
+        floatArrayOf(),
         intArrayOf(
             // Front face
             0, 1, 3, 3, 1, 2,
@@ -108,20 +109,12 @@ class CubeRenderer : MeshRenderer(
 
         val node = parent as CubeNode
 
-        var rotation = node.rotation
+        val rotation = node.rotation
 
-        rotation++
+        rotation.y ++
 
         if (rotation.y >= 360f) {
             rotation.y = 0f
-        }
-
-        if (rotation.x >= 360f) {
-            rotation.x = 0f
-        }
-
-        if (rotation.z >= 360f) {
-            rotation.z = 0f
         }
 
         node.updateRotation(rotation)
