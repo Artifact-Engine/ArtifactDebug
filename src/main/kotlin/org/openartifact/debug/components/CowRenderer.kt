@@ -1,26 +1,24 @@
 package org.openartifact.debug.components
 
-import glm_.vec3.Vec3
 import org.openartifact.artifact.core.graphics.mesh.OBJLoader
 import org.openartifact.artifact.core.graphics.component.MeshRendererComponent
 import org.openartifact.artifact.utils.FileConstants
-import org.openartifact.debug.nodes.BunnyNode
+import org.openartifact.debug.nodes.CowNode
 import java.io.File
 
-class BunnyRenderer : MeshRendererComponent() {
+class CowRenderer : MeshRendererComponent() {
 
-    lateinit var node : BunnyNode
+    lateinit var node : CowNode
 
     init {
-        mesh = OBJLoader.loadMesh(File(FileConstants.gameData(), "bunny.obj"))
+        mesh = OBJLoader.loadMesh(File(FileConstants.gameData(), "cow.obj"))
     }
 
     override fun awake() {
         super.awake()
 
-        node = parent as BunnyNode
+        node = parent as CowNode
 
-        node.updateScale(Vec3(5f))
     }
 
     override fun update(physicsDeltaTime : Double) {
