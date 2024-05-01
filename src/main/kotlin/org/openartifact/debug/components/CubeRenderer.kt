@@ -124,8 +124,6 @@ class CubeRenderer : MeshRenderer(
             rotation.z = 0f
         }
 
-        println(rotation)
-
         node.updateRotation(rotation)
     }
 
