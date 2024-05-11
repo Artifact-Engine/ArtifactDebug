@@ -1,6 +1,6 @@
 # ArtifactDebug
 
-ArtifactDebug provides additional nodes and components for debugging with the [Artifact Game Engine](https://www.github.com/meo209/Artifact).
+ArtifactDebug provides additional nodes and components for debugging with the [Artifact Game Engine](https://www.github.com/Artifact-Engine/Artifact).
 <br>
 
 I am are currently implementing [ImGui](https://github.com/kotlin-graphics/imgui).
